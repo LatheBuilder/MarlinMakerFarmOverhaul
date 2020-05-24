@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(jason, 20200523_01)" // Who made the changes. //jason build tracking
+#define STRING_CONFIG_H_AUTHOR "(jason, 20200524)" // Who made the changes. //jason build tracking
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "JASON.xyzMoving" //jason
+#define CUSTOM_MACHINE_NAME "JASON.xyConfig" //jason
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -1092,8 +1092,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 190 //jason
-#define Y_BED_SIZE 200 //jason
+#define X_BED_SIZE 220 //jason mark
+#define Y_BED_SIZE 220 //jason
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
