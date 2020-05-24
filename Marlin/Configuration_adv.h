@@ -2283,7 +2283,7 @@
    * M913 X/Y/Z/E to live tune the setting
    */
   //#define HYBRID_THRESHOLD
- /**
+ 
   #define X_HYBRID_THRESHOLD     100  // [mm/s]
   #define X2_HYBRID_THRESHOLD    100
   #define Y_HYBRID_THRESHOLD     100
@@ -2300,7 +2300,7 @@
   #define E5_HYBRID_THRESHOLD     30
   #define E6_HYBRID_THRESHOLD     30
   #define E7_HYBRID_THRESHOLD     30
- */
+ 
   /**
    * Use StallGuard2 to home / probe X, Y, Z.
    *
