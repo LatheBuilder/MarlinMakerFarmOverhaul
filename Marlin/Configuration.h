@@ -104,13 +104,13 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 0 //jason maybe wrong
+#define SERIAL_PORT -1 //jason config test per Chris's Basement video bltouch config.
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 -1 //jason might be wrong
+//#define SERIAL_PORT_2 -1 //jason might be wrong
 
 /**
  * This setting determines the communication speed of the printer.
@@ -828,7 +828,7 @@
  *
  * Enable this option for a probe connected to the Z Min endstop pin.
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //jason was enabled. this might be the problem!
 
 /**
  * Z_MIN_PROBE_PIN
