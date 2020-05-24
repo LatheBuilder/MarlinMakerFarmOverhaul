@@ -2085,10 +2085,10 @@
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT      800
-    #define Z2_CURRENT_HOME Z2_CURRENT
-    #define Z2_MICROSTEPS    16
-    #define Z2_RSENSE         0.11
+    #define Z2_CURRENT      Z_CURRENT //jason
+    #define Z2_CURRENT_HOME Z2_CURRENT //jason
+    #define Z2_MICROSTEPS    Z_MICROSTEPS //jason
+    #define Z2_RSENSE         Z_RSENSE //jason
     #define Z2_CHAIN_POS     -1
   #endif
 
@@ -2238,7 +2238,7 @@
    */
   #define STEALTHCHOP_XY
   #define STEALTHCHOP_Z
-  #define STEALTHCHOP_E //jason spreadCycle only recommended for extruders, not stealthchop
+  //#define STEALTHCHOP_E //jason spreadCycle only recommended for extruders, not stealthchop
 
   /**
    * Optimize spreadCycle chopper parameters by using predefined parameter sets
