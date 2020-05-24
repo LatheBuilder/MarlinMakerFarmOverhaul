@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "JASON.xyConfig" //jason
+#define CUSTOM_MACHINE_NAME "JASON.BL_opTest" //jason
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -1092,8 +1092,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 220 //jason mark
-#define Y_BED_SIZE 220 //jason
+#define X_BED_SIZE 209 //jason 
+#define Y_BED_SIZE 219 //jason
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
