@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "JASON.BL_Test" //jason
+#define CUSTOM_MACHINE_NAME "zMinPlugEndStps" //jason
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -828,7 +828,7 @@
  *
  * Enable this option for a probe connected to the Z Min endstop pin.
  */
-//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //jason was enabled. this might be the problem!
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //jason
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1057,13 +1057,13 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
-#define INVERT_Y_DIR false //jason
+#define INVERT_Y_DIR false
 #define INVERT_Z_DIR false
 
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false //jason
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1656,7 +1656,7 @@
  * you must uncomment the following option or it won't work.
  *
  */
-//#define SDSUPPORT //jason
+#define SDSUPPORT //jason
 
 /**
  * SD CARD: SPI SPEED
@@ -1713,7 +1713,7 @@
 //
 //  Set this option if CLOCKWISE causes values to DECREASE
 //
-#define REVERSE_ENCODER_DIRECTION //jason commenting back out while lcd disabled
+#define REVERSE_ENCODER_DIRECTION //jason
 
 //
 // This option reverses the encoder direction for navigating LCD menus.
