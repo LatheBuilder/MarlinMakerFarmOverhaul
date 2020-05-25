@@ -420,7 +420,7 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN P2_04 //jason
+#define E0_AUTO_FAN_PIN P2_04 //jason : moved extruder 0 fan to extruder 1 heater cartridge output to allow auto control (power off when cool).
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
@@ -630,7 +630,7 @@
 
   // Feature: Switch into SW mode after a deploy. It makes the output pulse longer. Can be useful
   //          in special cases, like noisy or filtered input configurations.
-  //#define BLTOUCH_FORCE_SW_MODE //jason. saving test for after suggested edits are in place
+  //#define BLTOUCH_FORCE_SW_MODE
 
   /**
    * Settings for BLTouch Smart 3.0 and 3.1
@@ -648,7 +648,7 @@
    * differs, a mode set eeprom write will be completed at initialization.
    * Use the option below to force an eeprom write to a V3.1 probe regardless.
    */
-  //#define BLTOUCH_SET_5V_MODE //jason LPC1768 input pins are 5v tolerant when used as digital (but not in ADC mode) [REMOVING FOR TEST]
+  //#define BLTOUCH_SET_5V_MODE
 
   /**
    * Safety: Activate if connecting a probe with an unknown voltage mode.
@@ -664,7 +664,7 @@
    * This feature was designed for Delta's with very fast Z moves however higher speed cartesians may function
    * If the machine cannot raise the probe fast enough after a trigger, it may enter a fault state.
    */
-  //#define BLTOUCH_HS_MODE //jason why not. I'll give it a try. removing for test
+  //#define BLTOUCH_HS_MODE
 
   // Safety: Enable voltage mode settings in the LCD menu.
   //#define BLTOUCH_LCD_VOLTAGE_MENU
@@ -1529,11 +1529,11 @@
  * Override if the automatically selected points are inadequate.
  */
 #if EITHER(AUTO_BED_LEVELING_3POINT, AUTO_BED_LEVELING_UBL)
-  #define PROBE_PT_1_X 50   //jason
+  #define PROBE_PT_1_X 20   //jason
   #define PROBE_PT_1_Y 150  //jason
-  #define PROBE_PT_2_X 150  //jason
-  #define PROBE_PT_2_Y 100  //jason
-  #define PROBE_PT_3_X 50   //jason
+  #define PROBE_PT_2_X 189  //jason
+  #define PROBE_PT_2_Y 90   //jason
+  #define PROBE_PT_3_X 20   //jason
   #define PROBE_PT_3_Y 30   //jason
 #endif
 
