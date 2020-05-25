@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "zMinPlugEndStps" //jason
+#define CUSTOM_MACHINE_NAME "zStopRemoved" //jason
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -614,7 +614,7 @@
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
 //#define USE_XMIN_PLUG //jason
 //#define USE_YMIN_PLUG //jason
-#define USE_ZMIN_PLUG //jason
+#define USE_ZMIN_PLUG //jason mark
 #define USE_XMAX_PLUG //jason
 #define USE_YMAX_PLUG //jason
 //#define USE_ZMAX_PLUG
@@ -648,7 +648,7 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop. //jason mark
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -828,7 +828,7 @@
  *
  * Enable this option for a probe connected to the Z Min endstop pin.
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //jason
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //jason NOPE CONFIRMED, Z_STOP_PIN == P1_27
 
 /**
  * Z_MIN_PROBE_PIN
