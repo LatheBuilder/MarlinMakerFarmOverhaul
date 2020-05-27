@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "JASON_BLT" //jason
+#define CUSTOM_MACHINE_NAME "JASON_1" //jason
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -483,11 +483,6 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // E3D HEMERA //jason
-  #define DEFAULT_Kp 15.98 //jason
-  #define DEFAULT_Ki 1.17  //jason
-  #define DEFAULT_Kd 54.42 //jason
-
   // Ultimaker
   //#define DEFAULT_Kp 22.2
   //#define DEFAULT_Ki 1.08
@@ -502,6 +497,11 @@
   //#define DEFAULT_Kp 63.0
   //#define DEFAULT_Ki 2.25
   //#define DEFAULT_Kd 440
+
+  // E3D HEMERA 24VDC //jason
+  #define DEFAULT_Kp 16.96 //jason
+  #define DEFAULT_Ki 1.25  //jason
+  #define DEFAULT_Kd 57.42 //jason
 
 #endif // PIDTEMP
 
@@ -551,9 +551,9 @@
   //#define DEFAULT_bedKd 1675.16
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
-  #define DEFAULT_bedKp 84.59  //jason
-  #define DEFAULT_bedKi 16.68  //jason
-  #define DEFAULT_bedKd 285.91 //jason
+  #define DEFAULT_bedKp 83.31  //jason
+  #define DEFAULT_bedKi 16.65  //jason
+  #define DEFAULT_bedKd 277.98 //jason
 
 #endif // PIDTEMPBED
 
@@ -965,7 +965,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, -48.6, 0 } //jason
+#define NOZZLE_TO_PROBE_OFFSET { 0, -48.6, -0.95 } //jason
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
