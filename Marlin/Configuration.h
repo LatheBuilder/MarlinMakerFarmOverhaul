@@ -115,7 +115,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
+#define BAUDRATE 115200 //jason 
 //#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
 
 /**
@@ -143,7 +143,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "JASON_1b_EEPROM" //jason
+#define CUSTOM_MACHINE_NAME "1e_LIN_ADV" //jason
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -579,9 +579,9 @@
     #define DEFAULT_Ki_LIST {   1.25,   1.25 } //jason
     #define DEFAULT_Kd_LIST { 57.42, 57.42 } //jason
   #else
-    #define DEFAULT_Kp  16.96 //jason for E#D HEMERA 24vdc
-    #define DEFAULT_Ki   1.25 //jason for E#D HEMERA 24vdc
-    #define DEFAULT_Kd 57.42 //jason for E#D HEMERA 24vdc
+    #define DEFAULT_Kp  16.78 //jason for E3D HEMERA 24vdc
+    #define DEFAULT_Ki   1.17 //jason for E3D HEMERA 24vdc
+    #define DEFAULT_Kd 60.08 //jason for E3D HEMERA 24vdc
   #endif
 #endif // PIDTEMP
 
@@ -899,7 +899,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 393 } //jason
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 393 } //jason x, y, z, e esteps confirmed.
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -986,7 +986,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-#define S_CURVE_ACCELERATION //jason
+//#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
