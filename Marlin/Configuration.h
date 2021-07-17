@@ -69,7 +69,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(jason, 20210706)" // Who made the changes. //jason build tracking
+#define STRING_CONFIG_H_AUTHOR "(jason, 20210716)" // Who made the changes. //jason build tracking
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -143,7 +143,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "1e_LIN_ADV" //jason
+#define CUSTOM_MACHINE_NAME "1k_fixYZ_b" //jason
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -899,14 +899,14 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 393 } //jason x, y, z, e esteps confirmed.
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 389.1 } //jason x, y, z, e esteps confirmed.
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 125, 125, 6, 25 } //jason E0 max might be high
+#define DEFAULT_MAX_FEEDRATE          { 125, 125, 6.0, 10.0 } //jason E0 dropped to 600mm/min (10.0mm/s). Near E3D Hemera maximum plastication limit, about double the quality limit.
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -919,7 +919,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 15, 1000 } //jason
+#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 300, 1000 } //jason z begins audible step input jitter @ 400mm/s^2
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -948,9 +948,9 @@
  */
 #define CLASSIC_JERK //jason
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 5.0 //jason
-  #define DEFAULT_YJERK 5.0 //jason
-  #define DEFAULT_ZJERK  0.3
+  #define DEFAULT_XJERK 10.0 //jason
+  #define DEFAULT_YJERK 10.0 //jason
+  #define DEFAULT_ZJERK  2.0 //jason
   //#define DEFAULT_IJERK  0.3
   //#define DEFAULT_JJERK  0.3
   //#define DEFAULT_KJERK  0.3
@@ -986,7 +986,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-//#define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION //jason trying s curve and higher jerk instead of lin advance?
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -1796,7 +1796,7 @@
  *   M501 - Read settings from EEPROM. (i.e., Throw away unsaved changes)
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
-#define EEPROM_SETTINGS     // Persistent storage with M500 and M501 //jason enabling EEPROM for faster tuning
+#define EEPROM_SETTINGS     // Persistent storage with M500 and M501 //jason
 //#define DISABLE_M503        // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
@@ -1831,14 +1831,14 @@
 //
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 180
-#define PREHEAT_1_TEMP_BED     70
-#define PREHEAT_1_TEMP_CHAMBER 35
+#define PREHEAT_1_TEMP_BED     50
+#define PREHEAT_1_TEMP_CHAMBER  0
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED    110
-#define PREHEAT_2_TEMP_CHAMBER 35
+#define PREHEAT_2_LABEL       "PETG"
+#define PREHEAT_2_TEMP_HOTEND 210
+#define PREHEAT_2_TEMP_BED    60
+#define PREHEAT_2_TEMP_CHAMBER  0
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 /**
